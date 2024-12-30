@@ -3,7 +3,7 @@ import React, { useState, useRef } from 'react'
 import { motion, AnimatePresence } from "framer-motion";
 import { HiArrowLeft, HiArrowRight } from "react-icons/hi2";
 
-import { ShinyText, SpotlightCard, BlurText   } from './../../animations/index'
+import { ShinyText, SpotlightCard, BlurText, SplitText   } from './../../animations/index'
 
 const Experience = () => {
 
@@ -98,7 +98,7 @@ const Experience = () => {
                                             <HiArrowLeft className='group-hover:size-56 fill-light  duration-300 transition-all group-hover:-translate-x-0.5 translate-x-10 ' />
                                         </div>
                                             <div className=' flex space-x-1 ' >
-                                                {ExperienceData.map((_, i) => (<div key={i}  onClick={() => setCurrentIndex(i)} className={`w-3 h-3 rounded-full ${i === currentIndex ? 'bg-light' : 'border-light border-[1px]'} `}   ></div>))}
+                                                {ExperienceData.map((_, i) => (<div key={i}  onClick={() => setCurrentIndex(i)} className={`w-3 h-3 rounded-full  ${i === currentIndex ? 'bg-light transition-transform duration-300' : 'border-light border-[1px] transition-transform duration-300'} `}   ></div>))}
                                             </div>                                        
                                         <div onClick={handleNext} className='rounded-full justify-center  w-9 h-9 items-center   p-1.5 group flex overflow-hidden cursor-pointer  border-[1px] ' >
                                             <HiArrowRight className='size-56 group-hover:size-6   fill-light  duration-300 transition-all group-hover:translate-x-10  ' />

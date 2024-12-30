@@ -76,7 +76,7 @@ const Footer = () => {
                       sticks: 0xdadafa,
                     }
                   }}
-        /> */}
+            /> */}
             
             <div className='flex justify-end p-4  pb-8  h-full items-end ' >
                 <div className="absolute z-20   p-6 pb-8 rounded-2xl shadow-md backdrop-blur-md " >
@@ -101,7 +101,7 @@ const Footer = () => {
                 </div>
             </div>
             <div>
-                <div className='flex items-end  h-fit  absolute bottom-0 justify-start space-y-2 space-x-6 p-4 pb-8 ' >
+                <div className='   h-fit  absolute bottom-0 justify-start -translate-y-12  space-y-4 space-x-0 p-4 pb-8 ' >
                     <div className='flex justify-end flex-col  h-full  items-start space-y-2  ' >
                        {
                             SocialMedia.map((Media, index) => (
@@ -112,7 +112,7 @@ const Footer = () => {
                        }
                     </div>
                     <div className="" >
-                        <div className= ' text-white flex  space-x-2 font-iosthin text-lg absolute bottom-0 pb-8 w-[40vw]  '>
+                        <div className= ' text-white flex  space-x-2 font-iosthin text-lg   absolute pb-8 w-[40vw]  '>
                             <a className=" bg-white bg-opacity-5 backdrop-blur-lg px-6 py-1.5 rounded-full   w-fit " >Resume</a>
                             <div className=" bg-white bg-opacity-5 backdrop-blur-lg px-6 py-1.5 rounded-full w-fit  " >+91 6383 417749</div>
                             <div className=" bg-white bg-opacity-5 backdrop-blur-lg px-6 py-1.5 rounded-full w-fit  " >Tamilnadu, India</div>
@@ -120,7 +120,7 @@ const Footer = () => {
                     </div>
                 </div>
             </div>
-            <div className="w-full text-grey hover:text-[#F97300] bg-dark absolute bottom-0 tracking-wider py-1   font-footer text-xs   p-2  " >
+            <div className="w-full text-grey hover:text-[#F97300] bg-dark absolute bottom-0 tracking-wider py-1   font-footer text-[10px]   p-2  " >
                 <motion.div initial={{ x: "0" }} animate={{ x: "-100%" }} transition={{ repeat: Infinity, repeatType: "loop", duration: 100, }} className='flex' >
                     <div>▞▚▞▚▞▚▞▚_Thinakaran_Manokaran_▚▞▚▞▚▞▚▞_Copyright_2025_</div>
                     <div>▞▚▞▚▞▚▞▚_Batman_▚▞▚▞▚▞▚▞_Copyright_2025_</div>
