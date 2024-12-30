@@ -1,0 +1,97 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root{
+    --light: #F6F5F2;
+    --dark:  #0C0C0C;
+}
+
+@font-face {
+    font-family: 'supertalls';
+    src: url('./assets/fonts/Duran-Medium.ttf');
+}
+
+@font-face {
+    font-family: 'edge';
+    src: url('./assets/fonts/Brigends-Expanded.otf');
+}
+
+@font-face {
+    font-family: 'creato';
+    src: url('./assets/fonts/CocoGothic-Bold_trial.ttf');
+}
+
+@font-face {
+    font-family: 'style';
+    src: url('./assets/fonts/against-regular.ttf');
+}
+
+@font-face {
+    font-family: 'subtitle';
+    src: url('./assets/fonts/SF-Pro-Rounded-Semibold.otf');
+}
+
+@font-face {
+    font-family: 'paragrabh';
+    src: url('./assets/fonts/CreatoDisplay-Medium.otf');
+}
+
+@font-face {
+    font-family: 'sfb';
+    src: url('./assets/fonts/SF-Pro-Display-Bold.otf');
+}
+
+@font-face {
+    font-family: 'lighttext';
+    src: url('./assets/fonts/Garet-Book.otf');
+}
+
+@font-face {
+    font-family: 'iosthin';
+    src: url('./assets/fonts/SF-Pro-Display-Regular.otf');
+}
+
+@font-face {
+    font-family: 'bentocom';
+    src: url('./assets/fonts/thugolatz.ttf');
+}
+
+@font-face {
+    font-family: 'roundman';
+    src: url('./assets/fonts/Roundman.ttf');
+}
+
+@font-face {
+    font-family: 'satoshi';
+    src: url('./assets/fonts/TT-Hoves-Pro-Trial-Light.ttf');
+}
+
+@font-face {
+    font-family: 'main';
+    src: url('./assets/fonts/Urbanist-VariableFont_wght.ttf');
+}
+
+@font-face {
+    font-family: 'footer';
+    src: url('./assets/fonts/UnispaceRg.otf');
+}
+
+@font-face {
+    font-family: 'upper';
+    src: url('./assets/fonts/couture-bld.otf');
+}
+
+::-webkit-scrollbar{
+    display: none;
+    scroll-behavior: auto; /* Or lack of scroll-behavior: smooth */
+}
+
+body{
+	overflow-x: hidden;
+    cursor: url("./assets/images/cursor/dark/pointer.cur"), auto;
+}
+
+.cursor-pointer {
+    cursor: url("./assets/images/cursor/dark/link.cur"), auto;
+}
