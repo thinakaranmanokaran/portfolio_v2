@@ -9,27 +9,27 @@ const Footer = () => {
     const SocialMedia = [
         {
             app: "Instagram",
-            link: "",
+            link: "https://www.instagram.com/thinakaranmanokaran/",
         },
         {
             app: "LinkedIn",
-            link: "",
+            link: "https://in.linkedin.com/in/thinakaran-manohar",
         },
         {
             app: "Whatsapp",
-            link: "",
+            link: "whatsapp://send?phone=9655982558&text=I'd%20like%20to%20chat%20with%20you",
         },
         {
             app: "GitHub",
-            link: "",
+            link: "https://github.com/thinakaranmanokaran",
         },
         {
             app: "Twitter",
-            link: "",
+            link: "https://x.com/DheenaManohar",
         },
         {
             app: "Old Portfolio",
-            link: "",
+            link: "https://thinakaranmanokaran.github.io/Portfolio/Main.html",
         },
     ]
 
@@ -105,7 +105,7 @@ const Footer = () => {
                     <div className='flex justify-end flex-col  h-full  items-start space-y-2  ' >
                        {
                             SocialMedia.map((Media, index) => (
-                                <a href={`http://${Media.link}`} target="_blank" className='text-white cursor-pointer group  flex items-center hover:underline  w-full transition-all duration-300 font-main text-2xl  ' rel="noopener noreferrer">
+                                <a href={Media.link} target="_blank" className='text-white cursor-pointer group  flex items-center hover:underline  w-full transition-all duration-300 font-main text-2xl  ' rel="noopener noreferrer">
                                     <ShinyText text={`${Media.app}`} disabled={false} speed={4} className='transition-all duration-300 ' /> <BsArrowUpRight className='size-5 group-hover:translate-x-3 transition-all duration-300 ' />
                                 </a>
                             ))
@@ -122,6 +122,9 @@ const Footer = () => {
             </div>
             <div className="w-full text-grey hover:text-[#F97300] bg-dark absolute bottom-0 tracking-wider py-1   font-footer text-[10px]   p-2  " >
                 <motion.div initial={{ x: "0" }} animate={{ x: "-100%" }} transition={{ repeat: Infinity, repeatType: "loop", duration: 100, }} className='flex' >
+                    <div>▞▚▞▚▞▚▞▚_Thinakaran_Manokaran_▚▞▚▞▚▞▚▞_Copyright_2025_</div>
+                    <div>▞▚▞▚▞▚▞▚_Batman_▚▞▚▞▚▞▚▞_Copyright_2025_</div>
+                    <div>▞▚▞▚▞▚▞▚_Sherlock_Holmes_▚▞▚▞▚▞▚▞_Copyright_2025_</div>
                     <div>▞▚▞▚▞▚▞▚_Thinakaran_Manokaran_▚▞▚▞▚▞▚▞_Copyright_2025_</div>
                     <div>▞▚▞▚▞▚▞▚_Batman_▚▞▚▞▚▞▚▞_Copyright_2025_</div>
                     <div>▞▚▞▚▞▚▞▚_Sherlock_Holmes_▚▞▚▞▚▞▚▞_Copyright_2025_</div>

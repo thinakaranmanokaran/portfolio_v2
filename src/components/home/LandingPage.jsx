@@ -5,7 +5,7 @@ import { AnimatePresence, motion } from "framer-motion";
 import CheckBoard from './../../assets/images/home/Structure.png'
 import Toast from "../global/Toast";
 // import ToggleSwich from '../global/ToggleSwich';
-import { ShinyText, SpotlightCard, SplitText, BlurText  } from './../../animations/index'
+import { ShinyText, SpotlightCard, SplitText, BlurText, Magnet, SmallBlob } from './../../animations/index'
 import Images from './../../assets/images/index'
 import Settings from "../global/Settings";
 
@@ -79,16 +79,16 @@ const LandingPage = () => {
             {
                 title: "Music"
             },
-    
+
         ]
 
         const ToggleSwich = React.memo(() => {
             const [toggled, setToggled] = useState(false);
-    
+
             const switchON = () => {
                 setToggled((prev) => {
                     const newState = !prev;
-    
+
                     if (newState) {
                         // Show toast after 1 second
                         setTimeout(() => {
@@ -97,11 +97,11 @@ const LandingPage = () => {
                     } else {
                         setShowToast(false); // Reset toast when toggled off
                     }
-    
+
                     return newState;
                 });
             };
-    
+
             return (
                 <div onClick={switchON} className={`w-10 h-6 rounded-full cursor-pointer transition-all duration-500 ${toggled ? ' bg-light50' : 'bg-light  '}`}>
                     <div className={`w-[20px] h-[20px] rounded-full duration-400 translate-y-[2px] transition-all shadow-lg ${toggled ? ' ml-[1px] bg-[#0c0c0c90]' : ' ml-[18px] bg-skyblue'}`}></div>
@@ -112,7 +112,7 @@ const LandingPage = () => {
         return (
             <div>
                 <AnimatePresence initial={false}>
-                    <motion.div key="box" initial={{ opacity: 0, scale: 0.5 }}  animate={{ opacity: 1, scale: 1 }}  exit={{ opacity: 0, scale: 0 }} transition={{ duration: 0.5 }} className={`w-full transition-opacity duration-500 relative z-50 text-xl text-light bg-light bg-opacity-10  font-subtitle  p-6 pr-8 rounded-3xl  `} >
+                    <motion.div key="box" initial={{ opacity: 0, scale: 0.5 }} animate={{ opacity: 1, scale: 1 }} exit={{ opacity: 0, scale: 0 }} transition={{ duration: 0.5 }} className={`w-full transition-opacity duration-500 relative z-50 text-xl text-light bg-light bg-opacity-10  font-subtitle  p-6 pr-8 rounded-3xl  `} >
                         {OptionData.map((Options, index) => (<div className=' leading-9 gap-16  flex items-center justify-between' >{Options.title} <ToggleSwich /></div>))}
                     </motion.div>
                 </AnimatePresence>
@@ -158,7 +158,7 @@ const LandingPage = () => {
         return (
             <div
                 className="absolute top-0 left-0 z-20  w-screen h-screen"
-                onMouseMove={handleMouseMove}
+            // onMouseMove={handleMouseMove}
             >
                 <svg
                     viewBox="0 0 200 200"
@@ -166,10 +166,10 @@ const LandingPage = () => {
                     width="1600"
                     height="500"
                     className={className}
-                    onclick={setChange}
-                    style={{
-                        transform: `translate(${currentPosition.x}%, ${currentPosition.y}%)`,
-                    }}
+                // onclick={setChange}
+                // style={{
+                //     transform: `translate(${currentPosition.x}%, ${currentPosition.y}%)`,
+                // }}
                 >
                     <path
                         fill="#FCCD2A"
@@ -185,7 +185,7 @@ const LandingPage = () => {
         return (
             <div
                 className="absolute top-72 left-96 z-20   w-screen h-screen"
-                onMouseMove={handleMouseMove}
+            // onMouseMove={handleMouseMove}
             >
                 <svg
                     viewBox="0 0 400 400"
@@ -193,10 +193,10 @@ const LandingPage = () => {
                     width="1600"
                     height="500"
                     className={className}
-                    onclick={setChange}
-                    style={{
-                        transform: `translate(${currentPosition.x}%, ${currentPosition.y}%)`,
-                    }}
+                // onclick={setChange}
+                // style={{
+                // transform: `translate(${currentPosition.x}%, ${currentPosition.y}%)`,
+                // }}
                 >
                     <path fill="#151515" d="M59,-24.7C68.9,-16.8,64.3,8.8,52,29.6C39.7,50.4,19.9,66.5,2.8,64.8C-14.2,63.2,-28.3,43.9,-36.6,25.3C-45,6.8,-47.4,-11,-40.3,-17.2C-33.2,-23.4,-16.6,-18,4,-20.3C24.5,-22.6,49,-32.5,59,-24.7Z" transform="translate(100 100)" />
 
@@ -211,7 +211,7 @@ const LandingPage = () => {
             <div>
                 <div className='flex h-screen w-screen  justify-between'>
                     <div className='ml-16 mt-32 w-3/5' >
-                        <div className='text-light50 font-supertalls text-2xl w-4/5' ><BlurText text="In a world of challenges, I stand ready. " /><SplitText className='font-edge text-6xl opacity-100 text-light' text="Thinakaran Manokaran " delay={80}  /> <BlurText text=". with " /> <BlurText className=' text-light opacity-100' text="Sherlock’s" /> <BlurText text=" mind and" /> <BlurText className=' text-light opacity-100' text="Batman’s"/> <BlurText text="resolve, I craft solutions that last." /></div>
+                        <div className='text-light50 font-supertalls text-2xl w-4/5' ><BlurText text="In a world of challenges, I stand ready. " /><SplitText className='font-edge text-6xl opacity-100 text-light' text="Thinakaran Manokaran " delay={80} /> <BlurText text=". with " /> <BlurText className=' text-light opacity-100' text="Sherlock’s" /> <BlurText text=" mind and" /> <BlurText className=' text-light opacity-100' text="Batman’s" /> <BlurText text="resolve, I craft solutions that last." /></div>
                         <div className='flex items-start justify-between w-3/4 mt-10' >
                             <div className='text-light font-supertalls text-xl flex items-center ' > <SplitText text="Web Developer " delay={50} /><TfiExchangeVertical className='fill-light size-4 ml-2 ' /> </div>
                             <div  >
@@ -225,6 +225,22 @@ const LandingPage = () => {
                         <BlobShape />
                         <BlackShape />
                     </div> */}
+                    <div className=" absolute z-20 -right-60 top-0  flex   " >
+                        <Magnet padding={2000} disabled={false}  >
+                            <div className="absolute top-0" >
+                                <svg viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg" width="1600" height="500" >
+                                    <path fill="#FCCD2A" d="M43.2,-14.3C50.6,8.6,47.4,34.8,32,46.6C16.6,58.4,-11.1,55.8,-33.3,40.8C-55.5,25.9,-72.4,-1.6,-65.9,-23.3C-59.5,-45,-29.7,-60.9,-5.9,-59C17.9,-57.1,35.9,-37.3,43.2,-14.3Z" transform="translate(250 100)" />
+                                </svg>
+                            </div>
+                        </Magnet>
+                        <SmallBlob padding={50} disabled={false}  >
+                            <div className=" translate-x-96 translate-y-60 " >
+                                <svg viewBox="0 0 400 400" xmlns="http://www.w3.org/2000/svg" width="1600" height="500" >
+                                    <path fill="#oeoeoe" d="M59,-24.7C68.9,-16.8,64.3,8.8,52,29.6C39.7,50.4,19.9,66.5,2.8,64.8C-14.2,63.2,-28.3,43.9,-36.6,25.3C-45,6.8,-47.4,-11,-40.3,-17.2C-33.2,-23.4,-16.6,-18,4,-20.3C24.5,-22.6,49,-32.5,59,-24.7Z" transform="translate(100 100)" />
+                                </svg>
+                            </div>
+                        </SmallBlob>
+                    </div>
                 </div>
                 {/* {showToast && (
                     <Toast

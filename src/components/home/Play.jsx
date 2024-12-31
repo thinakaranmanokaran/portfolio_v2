@@ -5,7 +5,7 @@ import { RiGithubLine } from "react-icons/ri";
 import { LuArrowUpRight } from "react-icons/lu";
 import { IoFolder } from "react-icons/io5";
 
-import { SpotlightCard } from "./../../animations/index"
+import { SpotlightCard, Count } from "./../../animations/index"
 
 import { Doughnut } from 'react-chartjs-2';
 import {
@@ -106,7 +106,11 @@ const Play = () => {
 
         return (
             <div className='w-32 bg-cover h-40 bg-center shadow-bento rounded-3xl flex justify-center items-center' style={{ backgroundImage: `url(${Images.ClockBG})` }} >
-                <div ref={divRef} className='text-white font-lighttext text-2xl absolute ' style={{ transform: `scale(1.1)`, opacity: angle % 2 === 0 ? 0.5 : 1, }} >{angle}°</div>
+                <div ref={divRef} className='text-white font-lighttext text-2xl absolute ' style={{ transform: `scale(1.1)`, opacity: angle % 2 === 0 ? 0.5 : 1, }} >
+                    <Count 
+                        from={0} to={angle} separator="," direction="up" duration={0.5} className="count-up-text"
+                    />°
+                </div>
                 <div className='rotate-90' >
                     <div className='w-[119px] h-[119px]  rounded-full flex justify-center  ' style={{ transform: `rotate(${angle}deg)`, transition: "transform 0.1s ease", }} >
                         <div className="w-0 h-0 border-l-[5px] border-l-transparent border-r-[5px] -translate-y-1.5 border-r-transparent border-b-[10px] border-b-red-500"></div>
