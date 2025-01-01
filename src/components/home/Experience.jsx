@@ -72,12 +72,12 @@ const Experience = () => {
         return(
             <div>
                 <div>
-                    <Fade blur={true}>
+                    <div>
                         <div className='flex space-x-3 w-full max-w-[40vw] font-roundman text-xl overflow-hidden'  >
                             {
                                 ExperienceData.map((Data, index) => ( 
                                     <div>
-                                        <div  className='text-white bg-grey bg-opacity-5   w-full min-w-[40vw] h-[55vh] pb-0 rounded-2xl max-w-[50vw] border-2 backdrop-blur-lg border-[#ffffff20] ' >
+                                        <motion.div initial={{ opacity: 0, filter: "blur(200px)" }} whileInView={{ opacity: 1, filter: "blur(0px)" }} transition={{ duration: 1, ease: "easeInOut" }}  className='text-white bg-grey bg-opacity-5   w-full min-w-[40vw] h-[55vh] pb-0 rounded-2xl max-w-[50vw] border-2 backdrop-blur-lg border-[#ffffff20] ' >
                                             <AnimatePresence> 
                                                 <motion.div  animate={{ x: `-${currentIndex * 41}vw` }} transition={{ duration: 1, ease: "easeInOut" }} className='relative   p-10 px-12   h-full w-full' >
                                                     <div className='flex space-x-3 items-center' >
@@ -92,7 +92,7 @@ const Experience = () => {
                                                     <p className='text-end font-main text-[18px] text-grey absolute bottom-4 right-6 ' >{Data.time}</p>
                                                 </motion.div>
                                             </AnimatePresence>
-                                        </div>
+                                        </motion.div>
                                         <div className='w-full flex justify-center items-center  mt-3 space-x-4 ' >
                                             <div onClick={handlePrev} className='rounded-full justify-center  w-9 h-9 items-center   p-1.5 group flex overflow-hidden cursor-pointer  border-[1px] ' >
                                                 <HiArrowLeft className='size-56 group-hover:size-6   fill-light  duration-300 transition-all group-hover:-translate-x-10  ' />
@@ -110,7 +110,7 @@ const Experience = () => {
                                 ))
                             }
                         </div>
-                    </Fade>
+                    </div>
                 </div>
             </div>
         )

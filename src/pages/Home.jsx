@@ -15,7 +15,6 @@ const Home = () => {
                 <Experience />
             </div>
             <div className='h-[60vh]' >
-
             <Footer />
             </div>
             {/* <FollowCursor /> */}

@@ -1,7 +1,7 @@
 import React from 'react'
 import { Hyperspeed } from './../../animations/index'
 import { BsArrowUpRight } from "react-icons/bs";
-import { ShinyText, SpotlightCard, FollowCursor   } from './../../animations/index'
+import { ShinyText, SpotlightCard, FollowCursor , BlurText , Fade  } from './../../animations/index'
 import { motion } from "framer-motion";
 
 const Footer = () => {
@@ -79,7 +79,7 @@ const Footer = () => {
             /> */}
             
             <div className='flex justify-end p-4  pb-8  h-full items-end ' >
-                <div className="absolute z-20   p-6 pb-8 rounded-2xl shadow-md backdrop-blur-md " >
+                <Fade blur={true} className="absolute z-20   p-6 pb-8 rounded-2xl shadow-md backdrop-blur-md " >
                     <form action="" className="flex flex-col text-white space-y-2 w-72 " >
                         <h1 className='font-sfb text-center text-2xl ' >Get in Touch</h1>
                         <label htmlFor="" className='relative  group ' >
@@ -98,25 +98,25 @@ const Footer = () => {
                             </div>
                         </div>
                     </form>
-                </div>
+                </Fade>
             </div>
             <div>
                 <div className='   h-fit  absolute bottom-0 justify-start -translate-y-12  space-y-4 space-x-0 p-4 pb-8 ' >
                     <div className='flex justify-end flex-col  h-full  items-start space-y-2  ' >
                        {
                             SocialMedia.map((Media, index) => (
-                                <a href={Media.link} target="_blank" className='text-white cursor-pointer group  flex items-center hover:underline  w-full transition-all duration-300 font-main text-2xl  ' rel="noopener noreferrer">
+                                <motion.a href={Media.link} target="_blank"  initial={{ x: "-100%" }}  whileInView={{ x: "0%" }} transition={{ duration:  1 , delay: index * 0.2, ease: "easeInOut", }}  className='text-white cursor-pointer group  flex items-center hover:underline  w-full transition-all duration-300 font-main text-2xl  ' rel="noopener noreferrer">
                                     <ShinyText text={`${Media.app}`} disabled={false} speed={4} className='transition-all duration-300 ' /> <BsArrowUpRight className='size-5 group-hover:translate-x-3 transition-all duration-300 ' />
-                                </a>
+                                </motion.a>
                             ))
                        }
                     </div>
                     <div className="" >
-                        <div className= ' text-white flex  space-x-2 font-iosthin text-lg   absolute pb-8 w-[40vw]  '>
+                        <motion.div initial={{ y: 100 }} animate={{ y:0 }} transition={{ duration: 1, ease: "easeInOut", }} className= ' text-white flex  space-x-2 font-iosthin text-lg   absolute pb-8 w-[40vw]  '>
                             <a className=" bg-white bg-opacity-5 backdrop-blur-lg px-6 py-1.5 rounded-full cursor-pointer  w-fit " href="https://drive.google.com/file/d/1ls0zxQZ9obQjG7CJTF9W0cFR5qwLrHs6/view?usp=sharing" rel="noopener noreferrer" target="_blank" >Resume</a>
                             <div className=" bg-white bg-opacity-5 backdrop-blur-lg px-6 py-1.5 rounded-full w-fit  " >+91 6383 417749</div>
                             <div className=" bg-white bg-opacity-5 backdrop-blur-lg px-6 py-1.5 rounded-full w-fit  " >Tamilnadu, India</div>
-                        </div>
+                        </motion.div>
                     </div>
                 </div>
             </div>
