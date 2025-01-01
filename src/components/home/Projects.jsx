@@ -90,7 +90,7 @@ const Projects = () => {
     }
     return (
         <div className='w-screen p-6  ' >
-            <div className='w-80 absolute  z-0 h-80 animate-spin bg-[#9336B4] rounded-custom blur-[100px] ' ></div>
+            <div className='w-[70vh] absolute -left-40 z-0 h-[70vh] animate-pulse bg-[#9336B4] rounded-full blur-[100px] ' ></div>
             <div className='relative z-20' >
                 <SplitText className='font-style text-white text-[100px] p-4 text-center  w-full ' text="Projects" />
                 <div className='flex justify-center items-center w-full h-full min-h-[80vh] -translate-x-20  translate-y-8  ' >

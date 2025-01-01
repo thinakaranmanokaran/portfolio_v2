@@ -113,7 +113,7 @@ const Footer = () => {
                     </div>
                     <div className="" >
                         <div className= ' text-white flex  space-x-2 font-iosthin text-lg   absolute pb-8 w-[40vw]  '>
-                            <a className=" bg-white bg-opacity-5 backdrop-blur-lg px-6 py-1.5 rounded-full   w-fit " >Resume</a>
+                            <a className=" bg-white bg-opacity-5 backdrop-blur-lg px-6 py-1.5 rounded-full cursor-pointer  w-fit " href="https://drive.google.com/file/d/1ls0zxQZ9obQjG7CJTF9W0cFR5qwLrHs6/view?usp=sharing" rel="noopener noreferrer" target="_blank" >Resume</a>
                             <div className=" bg-white bg-opacity-5 backdrop-blur-lg px-6 py-1.5 rounded-full w-fit  " >+91 6383 417749</div>
                             <div className=" bg-white bg-opacity-5 backdrop-blur-lg px-6 py-1.5 rounded-full w-fit  " >Tamilnadu, India</div>
                         </div>

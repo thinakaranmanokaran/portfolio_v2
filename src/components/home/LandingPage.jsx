@@ -210,7 +210,7 @@ const LandingPage = () => {
         <>
             <div>
                 <div className='flex h-screen w-screen  justify-between'>
-                    <div className='ml-16 mt-32 w-3/5' >
+                    <div className='ml-16 mt-32 w-full' >
                         <div className='text-light50 font-supertalls text-2xl w-4/5' ><BlurText text="In a world of challenges, I stand ready. " /><SplitText className='font-edge text-6xl opacity-100 text-light' text="Thinakaran Manokaran " delay={80} /> <BlurText text=". with " /> <BlurText className=' text-light opacity-100' text="Sherlock’s" /> <BlurText text=" mind and" /> <BlurText className=' text-light opacity-100' text="Batman’s" /> <BlurText text="resolve, I craft solutions that last." /></div>
                         <div className='flex items-start justify-between w-3/4 mt-10' >
                             <div className='text-light font-supertalls text-xl flex items-center ' > <SplitText text="Web Developer " delay={50} /><TfiExchangeVertical className='fill-light size-4 ml-2 ' /> </div>
@@ -225,22 +225,25 @@ const LandingPage = () => {
                         <BlobShape />
                         <BlackShape />
                     </div> */}
-                    <div className=" absolute z-20 -right-60 top-0  flex   " >
+                    <div className=" relative z-30 w-[60vw] h-screen  top-0 left-0  flex   " >
                         <Magnet padding={2000} disabled={false}  >
-                            <div className="absolute top-0" >
-                                <svg viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg" width="1600" height="500" >
-                                    <path fill="#FCCD2A" d="M43.2,-14.3C50.6,8.6,47.4,34.8,32,46.6C16.6,58.4,-11.1,55.8,-33.3,40.8C-55.5,25.9,-72.4,-1.6,-65.9,-23.3C-59.5,-45,-29.7,-60.9,-5.9,-59C17.9,-57.1,35.9,-37.3,43.2,-14.3Z" transform="translate(250 100)" />
-                                </svg>
-                            </div>
+                            <AnimatePresence>
+
+                            <motion.div className=" absolute left-0  top-20  w-full  " initial={{ opacity: 0, scale: 0 }} animate={{ opacity: 1, scale: 1 }} exit={{ opacity: 0, scale: 0 }} transition={{ duration: 2 }} >
+                                <div className="w-[400px] h-[400px] rounded-full" style={{ background: "radial-gradient(circle at 40% 30%,#0000 4%,57%,#000 85%) #FC4F00", boxShadow: "0 0px 60px rgba(0, 0, 0, 0.6)", }} ></div>
+                            </motion.div>
+                            </AnimatePresence>
                         </Magnet>
-                        <SmallBlob padding={50} disabled={false}  >
-                            <div className=" translate-x-96 translate-y-60 " >
-                                <svg viewBox="0 0 400 400" xmlns="http://www.w3.org/2000/svg" width="1600" height="500" >
-                                    <path fill="#oeoeoe" d="M59,-24.7C68.9,-16.8,64.3,8.8,52,29.6C39.7,50.4,19.9,66.5,2.8,64.8C-14.2,63.2,-28.3,43.9,-36.6,25.3C-45,6.8,-47.4,-11,-40.3,-17.2C-33.2,-23.4,-16.6,-18,4,-20.3C24.5,-22.6,49,-32.5,59,-24.7Z" transform="translate(100 100)" />
-                                </svg>
-                            </div>
+                        <SmallBlob padding={1000} disabled={false}  >
+                            <AnimatePresence>
+
+                            <motion.div className="  absolute top-96 left-0 " initial={{ opacity: 0, scale: 0 }} animate={{ opacity: 1, scale: 1 }} exit={{ opacity: 0, scale: 0 }} transition={{ duration: 2 }} >
+                                    <div className="w-[200px] h-[200px] rounded-full" style={{ background: "radial-gradient(circle at 40% 30%,#0000 4%,57%,#000 85%) #0C0C0C", boxShadow: "0 0px 100px rgba(0, 0, 0, 1)", }} ></div>
+                                </motion.div>
+                            </AnimatePresence>
                         </SmallBlob>
                     </div>
+                        <div className='absolute w-1/2 h-80 -right-60 top-20 z-10 rounded-custom animate-pulse saturate-200 blur-[160px] bg-orange ' ></div>
                 </div>
                 {/* {showToast && (
                     <Toast

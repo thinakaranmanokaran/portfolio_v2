@@ -65,7 +65,7 @@ const Settings = () => {
     }
 
     return (
-        <div className='flex  space-x-2 justify-start relative z-30' >
+        <div className='flex  space-x-2 justify-start relative z-50' >
             <AnimatePresence >
                 {showOptions &&
                     <motion.div key="box" initial={{ opacity: 0,filter: 'blur(10px)' }}  animate={{ opacity: 1,filter: 'blur(0px)' }}  exit={{ opacity: 0,filter: 'blur(10px)' }} transition={{ duration: 0.5 }}   >

@@ -145,7 +145,7 @@ const Play = () => {
         return (
             <div className="flex gap-1 flex-wrap">
                 {Array.from({ length: count }).map((_, index) => (
-                    <div key={index} className={`h-5 w-5  rounded-md bg-light ${className}`} ></div>
+                    <div key={index} className={`h-5 w-5 shadow-sm rounded-md bg-light ${className}`} ></div>
                 ))}
             </div>
         )
@@ -196,10 +196,10 @@ const Play = () => {
                 <div className='flex h-10  justify-center w-24 ' >
                     <img src={Images.BehanceText} alt="" srcset="" className='mix-blend-multiply w-fit ' />
                 </div>
-                <div className='flex flex-col items-start w-full' >
+                <div className='flex flex-col items-start w-full ' >
                     <div className='font-paragrabh ' >Streak</div>
                     <div>
-                        <StreakBar count={6} className={`first:bg-pink last:bg-pink odd:bg-pink  shadow-bento `} />
+                        <StreakBar count={7} className={`first:bg-pink last:bg-pink odd:bg-pink  `} />
                     </div>
                 </div>
             </div>
@@ -469,7 +469,7 @@ const Play = () => {
     const SocialMedia = () => {
         return (
             <div>
-                <div className='bg-light p-6 bg-opacity-55 rounded-3xl shadow-bento scale-100 hover:scale-105 transition-all duration-500' >
+                <div className='bg-light p-6 bg-opacity-10 backdrop-blur-lg rounded-3xl shadow-bento scale-100 hover:scale-105 transition-all duration-500' >
                     <div className='grid grid-cols-2 gap-2 ' >
                         <img src={Images.IOSInsta} alt="" srcset="" className='w-14 shadow-inner' />
                         <img src={Images.IOSWhatsApp} alt="" srcset="" className='w-14 shadow-inner' />

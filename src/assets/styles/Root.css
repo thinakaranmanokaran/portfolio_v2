@@ -116,3 +116,10 @@
       cursor: url("./../images/cursor/dark/dnd-move.png"), grabbing;
     }
   }
+
+  .sphere {
+    @apply w-[200px] rounded-full;
+    aspect-ratio: 1;
+    background: radial-gradient(circle at 40% 30%, transparent 4%, #FE4365 57%, black 90%);
+  }
+  
