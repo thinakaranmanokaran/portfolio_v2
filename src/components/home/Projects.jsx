@@ -57,7 +57,7 @@ const Projects = () => {
         });
 
         return (
-            <div className='stack-container'>
+            <div className='stack-container   '>
                 {props.map(({ x, y, rot, scale }, i) => (
                     <animated.div key={i} className='stack' style={{ x, y }}>
                         <animated.div className="shadow-lg "
@@ -79,9 +79,9 @@ const Projects = () => {
                                 boxShadow: "0px 3px 6px rgba(0, 0, 0, 0.16), 0px 3px 6px rgba(0, 0, 0, 0.23)"
                             }}
                         >
-                            <img className="rounded-xl min-h-44 object-cover w-full pointer-events-none select-none " src={ProjectData[i].img} alt="" srcset="" />
-                            <h3 className='font-upper text-xl py-1 pt-2 text-center ' >{ProjectData[i].title}</h3>
-                            <p  className='font-paragrabh text-text text-sm text-center'  >{ProjectData[i].paragrabh}</p>
+                            <img className="rounded-xl min-h-36 lg:min-h-44 object-cover w-full pointer-events-none select-none " src={ProjectData[i].img} alt="" srcset="" />
+                            <h3 className='font-upper text-sm lg:text-xl py-1 pt-2 text-center ' >{ProjectData[i].title}</h3>
+                            <p  className='font-paragrabh text-text text-xs lg:text-sm text-center'  >{ProjectData[i].paragrabh}</p>
                         </animated.div>
                     </animated.div>
                 ))}
@@ -89,10 +89,10 @@ const Projects = () => {
         );
     }
     return (
-        <div className='w-screen p-6  ' >
+        <div className='w-screen lg:p-6  ' >
             <div className='w-[70vh] absolute -left-40 z-0 h-[70vh] animate-pulse bg-[#9336B4] rounded-full blur-[100px] ' ></div>
             <div className='relative z-20' >
-                <SplitText className='font-style text-white text-[100px] p-4 text-center  w-full ' text="Projects" />
+                <SplitText className='font-style text-white text-6xl lg:text-[100px] p-4 text-center  w-full ' text="Projects" />
                 <Fade blur={true}>
                     <div className='flex justify-center items-center w-full h-full min-h-[80vh] -translate-x-20  translate-y-8  ' >
                         <ProjectCard />

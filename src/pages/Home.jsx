@@ -7,7 +7,7 @@ import { About, CommandPanel, Experience, LandingPage, Projects, Play, Footer } 
 const Home = () => {
     return (
         <div className=' cursor-[url(./assets/images/cursor/lightcursor.png)] ' >
-            <div className='bg-dark h-full w-full relative z-20   ' style={{ backgroundImage: `url(${BGNoise})` }} >
+            <div className='bg-dark h-full w-screen overflow-x-hidden relative z-20   ' style={{ backgroundImage: `url(${BGNoise})` }} >
                 <LandingPage />
                 <Projects />
                 <Play />

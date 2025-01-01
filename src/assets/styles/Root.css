@@ -117,6 +117,19 @@
     }
   }
 
+  @media (min-width: 300px ){
+    .stack > div{
+      min-width: 260px;
+      height: 55vh;
+      max-height: 75vh;
+    }
+
+    .stack {
+      top: 7%;
+      margin-left: -20px;
+    }
+  }
+
   .sphere {
     @apply w-[200px] rounded-full;
     aspect-ratio: 1;
