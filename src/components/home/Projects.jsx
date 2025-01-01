@@ -4,7 +4,7 @@ import { useDrag } from 'react-use-gesture';
 import ProjectData from './../../database/projects/ProjectData'
 import UseSmoothScroll from '../../hooks/UseSmoothScroll'
 
-import { ShinyText, SpotlightCard, SplitText, BlurText  } from './../../animations/index'
+import { ShinyText, SpotlightCard, SplitText, BlurText, Fade  } from './../../animations/index'
 
 import { GoLink } from "react-icons/go";
 
@@ -93,9 +93,11 @@ const Projects = () => {
             <div className='w-[70vh] absolute -left-40 z-0 h-[70vh] animate-pulse bg-[#9336B4] rounded-full blur-[100px] ' ></div>
             <div className='relative z-20' >
                 <SplitText className='font-style text-white text-[100px] p-4 text-center  w-full ' text="Projects" />
-                <div className='flex justify-center items-center w-full h-full min-h-[80vh] -translate-x-20  translate-y-8  ' >
-                    <ProjectCard />
-                </div>
+                <Fade blur={true}>
+                    <div className='flex justify-center items-center w-full h-full min-h-[80vh] -translate-x-20  translate-y-8  ' >
+                        <ProjectCard />
+                    </div>
+                </Fade>
             </div>
         </div>
     )

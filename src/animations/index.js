@@ -4,6 +4,7 @@ export { default as BlurText } from "./texts/BlurText";
 export { default as Count } from "./texts/Count";
 
 export { default as SpotlightCard } from "./cards/SpotlightCard";
+export { default as Fade } from "./cards/Fade";
 
 export { default as Hyperspeed } from "./canvas/Hyperspeed";
 
