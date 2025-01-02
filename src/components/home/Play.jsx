@@ -423,7 +423,7 @@ const Play = () => {
 
         return (
             <div>
-                <div className="bg-dark h-full w-full p-4 rounded-3xl shadow-lg flex space-x-10 items-center justify-between">
+                <div className="bg-dark h-full w-full p-4 rounded-3xl shadow-lg flex space-x-4 lg:space-x-10 items-center justify-between">
                     <div>
                         <DateDisplay />
                         <DoughnutChart />
@@ -505,7 +505,7 @@ const Play = () => {
                 <SecondCards />
                 <ThirdCards />
             </motion.div >
-            <div className='w-fit rounded-3xl border-2 md:hidden border-[#ffffff20] h-fit m-2 bg-grey bg-opacity-5 backdrop-blur-md  p-2 flex flex-col items-center space-y-4' >
+            <div className='w-fit rounded-3xl  border-2 md:hidden border-[#ffffff20] h-fit m-2 bg-grey bg-opacity-5 backdrop-blur-md  p-2 flex flex-col items-center space-y-4' >
                 <ProfileCard />
                 <div className="flex space-x-2" >
                     <CompassCard />

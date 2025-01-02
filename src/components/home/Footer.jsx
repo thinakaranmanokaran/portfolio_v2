@@ -1,7 +1,9 @@
-import React from 'react'
+import React, { useState } from 'react'
 import { Hyperspeed } from './../../animations/index'
 import { BsArrowUpRight } from "react-icons/bs";
 import { ShinyText, SpotlightCard, FollowCursor , BlurText , Fade  } from './../../animations/index'
+import { TbMenu } from "react-icons/tb";
+import { TfiClose } from "react-icons/tfi";
 import { motion } from "framer-motion";
 
 const Footer = () => {
@@ -31,7 +33,21 @@ const Footer = () => {
             app: "Old Portfolio",
             link: "https://thinakaranmanokaran.github.io/Portfolio/Main.html",
         },
+        {
+            app: "Resume",
+            link: "https://thinakaranmanokaran.github.io/Portfolio/Main.html",
+        },
+        {
+            app: "Phone",
+            link: "https://thinakaranmanokaran.github.io/Portfolio/Main.html",
+        },
     ]
+
+    const [ openMenu, setOpenMenu ] = useState(false);
+
+    function toggleMenu() {
+        setOpenMenu(!openMenu);
+    }
 
     return (
         <div className='fixed bottom-0 bg-black z-10 h-full w-full ' >
@@ -101,17 +117,18 @@ const Footer = () => {
                 </Fade>
             </div>
             <div>
-                <div className='   h-fit  absolute bottom-0 justify-start -translate-y-12  space-y-4 space-x-0 p-4 pb-8 ' >
-                    <div className='flex justify-end flex-col  h-full  items-start space-y-2  ' >
+                <div className='   h-fit  absolute bottom-0 justify-start -translate-y-6 lg:-translate-y-12  space-y-4 space-x-0 lg:p-4 p-0 lg:pb-8 ' >
+                        <span onClick={toggleMenu} className=" absolute -top-1 left-2 text-white text-xl transition-all duration-300 " > { openMenu ? <TfiClose size={18} /> : <TbMenu /> } </span>
+                    <div className={`flex justify-end flex-col transition-transform duration-500 h-full  items-start space-y-2 bg-white bg-opacity-5  backdrop-blur-lg p-4 rounded-tr-2xl rounded-br-2xl  ${openMenu ? " translate-x-0" : "-translate-x-60  " }`} >
                        {
-                            SocialMedia.map((Media, index) => (
-                                <motion.a href={Media.link} target="_blank"  initial={{ x: "-100%" }}  whileInView={{ x: "0%" }} transition={{ duration:  1 , delay: index * 0.2, ease: "easeInOut", }}  className='text-white cursor-pointer group  flex items-center hover:underline  w-full transition-all duration-300 font-main text-2xl  ' rel="noopener noreferrer">
-                                    <ShinyText text={`${Media.app}`} disabled={false} speed={4} className='transition-all duration-300 ' /> <BsArrowUpRight className='size-5 group-hover:translate-x-3 transition-all duration-300 ' />
+                           SocialMedia.map((Media, index) => (
+                                <motion.a href={Media.link} target="_blank"  key={index} initial={{ x: "-100%" }}  whileInView={{ x: "0%" }} transition={{ duration:  0 , ease: "easeInOut", }}  className={`text-white cursor-pointer group  flex items-center hover:underline  w-full transition-all duration-300 font-main text-base lg:text-2xl `} rel="noopener noreferrer">
+                                    <ShinyText text={`${Media.app}`} disabled={false} speed={4} className='transition-all duration-300 ' /> <BsArrowUpRight className='  lg:size-5 group-hover:translate-x-3 transition-all duration-300 ' />
                                 </motion.a>
-                            ))
+                            ))  
                        }
                     </div>
-                    <div className="" >
+                    <div className="hidden lg:block" >
                         <motion.div initial={{ y: 100 }} animate={{ y:0 }} transition={{ duration: 1, ease: "easeInOut", }} className= ' text-white flex  space-x-2 font-iosthin text-lg   absolute pb-8 w-[40vw]  '>
                             <a className=" bg-white bg-opacity-5 backdrop-blur-lg px-6 py-1.5 rounded-full cursor-pointer  w-fit " href="https://drive.google.com/file/d/1ls0zxQZ9obQjG7CJTF9W0cFR5qwLrHs6/view?usp=sharing" rel="noopener noreferrer" target="_blank" >Resume</a>
                             <div className=" bg-white bg-opacity-5 backdrop-blur-lg px-6 py-1.5 rounded-full w-fit  " >+91 6383 417749</div>
