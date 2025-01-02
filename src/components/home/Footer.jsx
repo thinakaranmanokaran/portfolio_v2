@@ -93,7 +93,7 @@ const Footer = () => {
         <div className='fixed bottom-0 bg-black z-10 h-full w-full ' >
             {/* <FollowCursor /> */}
 
-            {/* <Hyperspeed
+            <Hyperspeed
                 effectOptions={{
                     onSpeedUp: () => { },
                     onSlowDown: () => { },
@@ -132,7 +132,7 @@ const Footer = () => {
                       sticks: 0xdadafa,
                     }
                   }}
-            /> */}
+            />
             
             <div className='flex justify-end p-4  pb-8  h-full items-end ' >
                 <Fade blur={true} className="absolute z-20   p-6 pb-8 rounded-2xl shadow-md backdrop-blur-md " >

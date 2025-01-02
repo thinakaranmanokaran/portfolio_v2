@@ -94,18 +94,8 @@
     touch-action: none;
   }
   
-  .stack > div {
-    background-size: auto 85%;
-    background-repeat: no-repeat;
-    background-position: center center;
-    /* width: 450px; */
-    min-width: 300px;
-    height: 85vh;
-    max-height: 400px;
-    will-change: transform;
-    user-select: none;
-    border-radius: 10px;
-    box-shadow: 0 5px 50px rgba(129, 129, 129, 0.05);
+  .stackyy {
+  
   
     &:hover {
       cursor: url("./../images/cursor/dark/openhand.png"), grab;
@@ -117,42 +107,6 @@
     }
   }
 
-  @media (min-width: 300px ){
-    .stack > div{
-      min-width: 260px;
-      height: 55vh;
-      max-height: 75vh;
-    }
-
-    .stack {
-      top: 7%;
-      margin-left: -20px;
-    }
-  }
-  @media (min-width: 700px ){
-    .stack > div{
-      min-width: 260px;
-      height: 45vh;
-      max-height: 75vh;
-    }
-
-    .stack {
-      top: 7%;
-      margin-left: -20px;
-    }
-  }
-  @media (min-width: 1000px ){
-    .stack > div{
-      min-width: 300px;
-      height: 85vh;
-      max-height: 400px;
-    }
-
-    .stack {
-      top: 7%;
-      margin-left: -20px;
-    }
-  }
 
   .sphere {
     @apply w-[200px] rounded-full;

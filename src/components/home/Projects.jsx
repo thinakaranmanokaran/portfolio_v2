@@ -59,7 +59,7 @@ const Projects = () => {
         return (
             <div className='stack-container   '>
                 {props.map(({ x, y, rot, scale }, i) => (
-                    <animated.div key={i} className='stack' style={{ x, y }}>
+                    <animated.div key={i} className='max-w-80 absolute top-0 -ml-16 stackyy  ' style={{ x, y }}>
                         <animated.div className="shadow-lg "
                             {...bind(i)}
                             style={{
