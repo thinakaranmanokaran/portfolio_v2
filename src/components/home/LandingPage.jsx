@@ -209,12 +209,12 @@ const LandingPage = () => {
     return (
         <>
             <div>
-                <div className='flex h-screen w-screen items-center lg:justify-between'>
-                    <div className=' p-4 lg:ml-16 lg:mt-32 relative z-50 w-full lg:w-3/5 ' >
-                        <div className='text-light50 font-supertalls text-lg lg:text-2xl w-full min-w-[310px] lg:w-4/5' ><BlurText text="In a world of challenges, I stand ready. " /><SplitText className='font-edge text-3xl lg:text-6xl opacity-100 text-light' text="Thinakaran Manokaran " delay={80} /> <BlurText text=". with " /> <BlurText className=' text-light opacity-100' text="Sherlock’s" /> <BlurText text=" mind and" /> <BlurText className=' text-light opacity-100' text="Batman’s" /> <BlurText text="resolve, I craft solutions that last." /></div>
+                <div className='flex h-screen w-screen items-center lg:items-start lg:justify-between'>
+                    <div className=' p-4 lg:ml-16 md:mt-32  relative z-50 w-full lg:w-4/6 ' >
+                        <div className='text-light50 font-supertalls text-lg lg:text-2xl w-full min-w-[310px] md:w-3/5 lg:w-4/5' ><BlurText text="In a world of challenges, I stand ready. " /><SplitText className='font-edge text-3xl lg:text-6xl opacity-100 text-light' text="Thinakaran Manokaran " delay={80} /> <BlurText text=". with " /> <BlurText className=' text-light opacity-100' text="Sherlock’s" /> <BlurText text=" mind and" /> <BlurText className=' text-light opacity-100' text="Batman’s" /> <BlurText text="resolve, I craft solutions that last." /></div>
                         <div className='flex items-start justify-between w-3/4 mt-10' >
                             <div className='text-light font-supertalls text-lg lg:text-xl flex items-center ' > <SplitText text="Web Developer " delay={50} /><TfiExchangeVertical className='fill-light size-4 ml-2 ' /> </div>
-                            <div className="hidden" >
+                            <div className="hidden " >
                                 <Settings />
                             </div>
                         </div>
@@ -225,19 +225,19 @@ const LandingPage = () => {
                         <BlobShape />
                         <BlackShape />
                     </div> */}
-                    <div className=" absolute bg-  z-30 w-fit h-screen top-36 lg:top-10 left-1/2 -translate-x-1/2 lg:right-4  flex   " >
+                    <div className=" absolute lg:static bg-  z-30 w-fit h-screen top-36 md:top-10 left-1/2 -translate-x-1/2  md:translate-x-0 md:right-4 lg:translate-y-20 flex   " >
                         <Magnet padding={2000} disabled={false}  >
                             <AnimatePresence>
                                 <motion.div className="   left-0  top-0  w-full  " initial={{ opacity: 0, scale: 0 }} animate={{ opacity: 1, scale: 1 }} exit={{ opacity: 0, scale: 0 }} transition={{ duration: 2 }} >
-                                    <div className=" w-60 h-60 lg:w-[400px] lg:h-[400px] rounded-full" style={{ background: "radial-gradient(circle at 40% 30%,#0000 4%,57%,#000 85%) #FC4F00", boxShadow: "0 0px 60px rgba(0, 0, 0, 0.6)", }} ></div>
+                                    <div className=" w-60 h-60 md:w-[400px] md:h-[400px] rounded-full" style={{ background: "radial-gradient(circle at 40% 30%,#0000 4%,57%,#000 85%) #FC4F00", boxShadow: "0 0px 60px rgba(0, 0, 0, 0.6)", }} ></div>
                                 </motion.div>
                             </AnimatePresence>
                         </Magnet>
                         <SmallBlob padding={1400} disabled={false}  >
                             <AnimatePresence>
 
-                            <motion.div className="   absolute top-40 lg:top-72 -left-[30vw] " initial={{ opacity: 0, scale: 0 }} animate={{ opacity: 1, scale: 1 }} exit={{ opacity: 0, scale: 0 }} transition={{ duration: 2 }} >
-                                    <div className=" w-32 h-32 lg:w-[200px] lg:h-[200px] rounded-full" style={{ background: "radial-gradient(circle at 40% 30%,#0000 4%,57%,#000 85%) #0C0C0C", boxShadow: "0 0px 100px rgba(0, 0, 0, 1)", }} ></div>
+                            <motion.div className="   absolute top-40 md:top-72 md:-left-[50vw] -left-[30vw] lg:-left-[20vw] " initial={{ opacity: 0, scale: 0 }} animate={{ opacity: 1, scale: 1 }} exit={{ opacity: 0, scale: 0 }} transition={{ duration: 2 }} >
+                                    <div className=" w-32 h-32 md:w-[200px] md:h-[200px] rounded-full" style={{ background: "radial-gradient(circle at 40% 30%,#0000 4%,57%,#000 85%) #0C0C0C", boxShadow: "0 0px 100px rgba(0, 0, 0, 1)", }} ></div>
                                 </motion.div>
                             </AnimatePresence>
                         </SmallBlob>

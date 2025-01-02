@@ -94,7 +94,7 @@ const Projects = () => {
             <div className='relative z-20' >
                 <SplitText className='font-style text-white text-6xl lg:text-[100px] p-4 text-center  w-full ' text="Projects" />
                 <Fade blur={true}>
-                    <div className='flex justify-center items-center w-full h-full min-h-[80vh] -translate-x-20  translate-y-8  ' >
+                    <div className='flex justify-center items-center w-full h-full min-h-[80vh] -translate-x-20  translate-y-8 md:translate-y-20  ' >
                         <ProjectCard />
                     </div>
                 </Fade>

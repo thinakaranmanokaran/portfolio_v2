@@ -500,7 +500,7 @@ const Play = () => {
 
     return (
         <div className='flex justify-center ' >
-            <motion.div  initial={{ width: "200px", height: "100px" , overflow: "hidden",    }} whileInView={{ width: "auto", height: "auto",  }} transition={{ duration: 1, ease: "easeInOut" }} className='w-fit rounded-3xl border-2 hidden border-[#ffffff20] h-fit bg-grey bg-opacity-5 backdrop-blur-md  p-10 px-10 space-y-4' >
+            <motion.div  initial={{ width: "200px", height: "100px" , overflow: "hidden",    }} whileInView={{ width: "auto", height: "auto",  }} transition={{ duration: 1, ease: "easeInOut" }} viewport={{  once: true }} className='w-fit rounded-3xl border-2 hidden md:block border-[#ffffff20] h-fit bg-grey bg-opacity-5 backdrop-blur-md  p-10 px-10 space-y-4' >
                 <TopCards />
                 <SecondCards />
                 <ThirdCards />

@@ -88,13 +88,13 @@ const Experience = () => {
             <div>
                 <div>
                     <div>
-                        <div className='flex space-x-3 w-full  font-roundman text-sm lg:text-xl overflow-hidden'  >
+                        <div className='flex space-x-3 w-full  font-roundman text-sm md:text-xl overflow-hidden'  >
                             <div>
-                                <motion.div initial={{ opacity: 0, filter: "blur(200px)" }} whileInView={{ opacity: 1, filter: "blur(0px)" }} transition={{ duration: 1, ease: "easeInOut" }} className='text-white bg-grey bg-opacity-5 flex  w-full max-w-[91vw] lg:max-w-[41vw]  h-[55vh] pb-0 rounded-2xl border-2 backdrop-blur-lg border-[#ffffff20] ' >
+                                <motion.div initial={{ opacity: 0, filter: "blur(200px)" }} whileInView={{ opacity: 1, filter: "blur(0px)" }} viewport={{once: true}} transition={{ duration: 1, ease: "easeInOut" }} className='text-white bg-grey bg-opacity-5 flex  w-full max-w-[91vw] md:max-w-[41vw]  h-[55vh] pb-0 rounded-2xl border-2 backdrop-blur-lg border-[#ffffff20] ' >
                                     {
                                         ExperienceData.map((Data, index) => (
                                             <AnimatePresence>
-                                                <motion.div animate={{ x: isSmallScreen ? `-${currentIndex * 90}vw` : `-${currentIndex * 41}vw`, }} key={index} transition={{ duration: 1, ease: "easeInOut" }} className='relative p-6   lg:p-10 lg:px-12   h-full w-full min-w-[90vw] lg:min-w-[41vw] ' >
+                                                <motion.div animate={{ x: isSmallScreen ? `-${currentIndex * 90}vw` : `-${currentIndex * 41}vw`, }} key={index} transition={{ duration: 1, ease: "easeInOut" }} className='relative p-6   md:p-10 md:px-12   h-full w-full min-w-[90vw] md:min-w-[41vw] ' >
                                                     <div className='flex space-x-1.5 lg:space-x-3 items-center' >
                                                         <h1>{Data.role}</h1>
                                                         <div className=' w-1.5 h-1.5 lg:w-2 lg:h-2 bg-light rounded-full ' ></div>
@@ -136,7 +136,7 @@ const Experience = () => {
         <div >
             <div className='p-2 pt-4 lg:pt-6 lg:p-6' >
                 <div>
-                    <BlurText className='text-white w-full text-center text-4xl lg:text-[100px] font-style ' text="Experience" />
+                    <BlurText className='text-white w-full text-center text-4xl md:text-6xl lg:text-[100px] font-style ' text="Experience" />
                 </div>
                 <div className='flex justify-center mt-10'>
                     <ExperienceSlide />

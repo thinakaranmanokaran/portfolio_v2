@@ -95,3 +95,8 @@ body{
 .cursor-pointer {
     cursor: url("./assets/images/cursor/dark/link.cur"), auto;
 }
+
+::selection {
+    background: transparent;
+    color: #FCC737; 
+  }

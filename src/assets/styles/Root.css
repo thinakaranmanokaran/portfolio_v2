@@ -129,6 +129,30 @@
       margin-left: -20px;
     }
   }
+  @media (min-width: 700px ){
+    .stack > div{
+      min-width: 260px;
+      height: 45vh;
+      max-height: 75vh;
+    }
+
+    .stack {
+      top: 7%;
+      margin-left: -20px;
+    }
+  }
+  @media (min-width: 1000px ){
+    .stack > div{
+      min-width: 300px;
+      height: 85vh;
+      max-height: 400px;
+    }
+
+    .stack {
+      top: 7%;
+      margin-left: -20px;
+    }
+  }
 
   .sphere {
     @apply w-[200px] rounded-full;
