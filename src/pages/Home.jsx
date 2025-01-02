@@ -17,7 +17,7 @@ const Home = () => {
   
   <meta property="og:title" content="Thinakaran Manokaran | Developer & Designer" />
   <meta property="og:description" content="Explore the portfolio of Thinakaran Manokaran, a professional MERN stack developer based in Thanjavur." />
-  <meta property="og:image" content="https://dheena-portfolio-v2.vercel.app/preview.jpg" />
+  <meta property="og:image" content="https://dheena-portfolio-v2.vercel.app/preview.png" />
   <meta property="og:url" content="https://dheena-portfolio-v2.vercel.app" />
   <meta property="og:type" content="website" />
   
@@ -25,7 +25,7 @@ const Home = () => {
   <meta name="twitter:title" content="Thinakaran Manokaran | Developer & Designer" />
   <meta property="twitter:url" content="https://dheena-portfolio-v2.vercel.app" />
   <meta name="twitter:description" content="Explore the portfolio of Thinakaran Manokaran, a professional MERN stack developer based in Thanjavur." />
-  <meta name="twitter:image" content="https://dheena-portfolio-v2.vercel.app/preview.jpg" />
+  <meta name="twitter:image" content="https://dheena-portfolio-v2.vercel.app/preview.png" />
 
   <link rel="canonical" href="https://dheena-portfolio-v2.vercel.app" />
 
