@@ -10,7 +10,7 @@ const Home = () => {
     const siteLink = import.meta.env.VITE_SITE_LINK;
     return (
         <div className=' cursor-[url(./assets/images/cursor/lightcursor.png)] ' >
-{/* <Helmet>
+<Helmet>
   <title>Thinakaran Manokaran | Developer & Designer</title>
   <meta name="description" content="Portfolio of Thinakaran Manokaran, a skilled web developer and designer in Thanjavur specializing in MERN stack and modern web solutions." />
   <meta name="keywords" content="Web Developer, Thanjavur, MERN Stack, React Developer, Portfolio" />
@@ -33,9 +33,9 @@ const Home = () => {
 
   <link rel="canonical" href={siteLink} />
 
-</Helmet> */}
+</Helmet>
 
-            {/* <StructuredData /> */}
+            <StructuredData />
             <div className='bg-dark h-full w-screen overflow-x-hidden relative z-20   ' style={{ backgroundImage: `url(${BGNoise})` }} >
                 <LandingPage />
                 <Projects />
